@@ -524,7 +524,7 @@ class SerialLibrary:
         """
         if size is not None:
             size = float(size)
-        if terminator != LF:
+        if terminator != LF and not isinstance(terminator, bytes):
             terminator = self._encode(terminator)
         return self._decode(
             self._port(port_locator).read_until(terminator=terminator, size=size),
