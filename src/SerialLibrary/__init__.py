@@ -16,8 +16,6 @@ from robot.api import logger
 from robot.utils import asserts, is_truthy, is_string
 from robot.utils.unic import unic
 
-from .version import VERSION as __version__
-
 if platform == 'win32':
     import ntpath as ospath
 else:
@@ -129,7 +127,7 @@ class SerialLibrary:
     """
 
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
-    ROBOT_LIBRARY_VERSION = __version__
+    ROBOT_LIBRARY_VERSION = (0,3,0)
 
     LOGGER_MAP = dict(INFO=logger.info, DEBUG=logger.debug, WARN=logger.warn)
 
