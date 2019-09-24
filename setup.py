@@ -18,9 +18,7 @@ if platform.startswith('java'):
 
 
 CURDIR = dirname(abspath(__file__))
-VERSION = load_source(
-    'version', 'version',
-    open(join(CURDIR, 'src', 'SerialLibrary', 'version.py'))).VERSION
+VERSION = (0,3,1)
 README = open(join(CURDIR, 'README.rst')).read()
 CLASSIFIERS = '\n'.join(
     map(' :: '.join, [
